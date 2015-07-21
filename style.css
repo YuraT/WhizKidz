@@ -1,0 +1,36 @@
+h1 {
+
+color: #ba00ff;
+text-align: center;
+}
+ul.nav {
+
+list-style-type: none;
+background-color: gold;
+padding: 5px;
+margin-left: 10px;
+border: 2px dashed black
+}
+ul.nav a:hover {
+    background-color: black;
+    color: azure;
+    text-decoration: none;
+}
+
+ul.nav a {
+padding: 3px;    
+}
+
+.imgCent {
+    display: block;
+    margin: auto;
+}
+
+#Tnx, #TiO {
+    display: none;
+}
+
+.rate {
+    font-size: 24px;
+    text-align: center;
+}
