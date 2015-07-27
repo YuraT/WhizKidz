@@ -8,13 +8,15 @@ public class Conversion{
 	public Conversion() {
 		java.util.Scanner scn = new java.util.Scanner(System.in);
 		
-		System.out.println("Enter the number of feet: ");
-		int numberOfFeet = scn.nextInt();
-		if(numberOfFeet < 0) {
-			System.out.println("Please enter a valid number. More than 0.");
-		}else {
-			int answer = numberOfFeet * 12;
-			System.out.println("The number of inches is " + answer + ".");
+		int numberOfFeet = -2;
+		while(numberOfFeet < 0) {
+			System.out.println("Enter the number of feet: ");
+			numberOfFeet = scn.nextInt();
+			if(numberOfFeet < 0) {
+				System.out.println("Please enter a valid number. More than 0.");
+			}
 		}
+		int answer = numberOfFeet * 12;
+		System.out.println("The number of inches is " + answer + ".");
 	}
 }
