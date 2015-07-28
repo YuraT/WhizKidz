@@ -1,5 +1,5 @@
 body {
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Iceland', cursive;
 }
 
 .standard button {
@@ -8,6 +8,7 @@ body {
     padding: 7px;
     width: 50px;
     border-radius: 10px;
+    font-family: 'Iceland', cursive;
 }
 .standard {
     display: inline-block;
@@ -23,7 +24,15 @@ body {
     font-size: 32px;
 }
 
-#answ-Box, #answ-h2 {
-    width: 300px;
-    font-size: 100px;
+#answ-Box {
+    font-size: 80px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#answ-h2 {
+    display: inline-block;
+    font-size: 80px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: lightgray
 }
