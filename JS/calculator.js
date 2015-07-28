@@ -1,9 +1,9 @@
 var main = function () {
-    var usNum = "";
-    var numbers = [];
-    var oper = [];
-    var answ = 0;
-    var output = "";
+    var usNum = "", 
+        numbers = [], 
+        oper = [], 
+        answ = 0, 
+        output = "";
     $(".standard button").click(function () {
         var input = $(this).text();
 
@@ -67,6 +67,16 @@ var main = function () {
         console.log(usNum);
         console.log(numbers);
         console.log(oper);
+    });
+    
+    $("#clear").click(function() {
+        usNum = "";
+        numbers = [];
+        oper = [];
+        answ = 0;
+        output = "";
+        
+        $("#answ-h2").text(output);
     });
 };
 
