@@ -2,6 +2,7 @@ var main = function () {
     var usNum = "";
     var numbers = [];
     var oper = [];
+    var answ = 0;
     $(".standard button").click(function () {
         var input = $(this).text();
 
@@ -14,6 +15,38 @@ var main = function () {
             numbers.push(parseFloat(usNum));
             usNum = "";
             oper.push(input);
+            if (numbers.length === 2) {
+                var op1 = oper.shift();
+                var num1 = numbers.shift();
+                var num2 = numbers.shift();
+                
+                switch(op1) {
+                    case "+" :
+                        answ = num1 + num2;
+                        console.log(answ);
+                        oper = [];
+                        $("#answ-h2").text(answ);
+                        break;
+                    case "-" :
+                        answ = num1 - num2;
+                        console.log(answ);
+                        oper = [];
+                        $("#answ-h2").text(answ);
+                        break;
+                    case "*" :
+                        answ = num1 * num2;
+                        console.log(answ);
+                        oper = [];
+                        $("#answ-h2").text(answ);
+                        break;
+                    case "/" :
+                        answ = num1 / num2
+                        console.log(answ);
+                        oper = [];
+                        $("#answ-h2").text(answ);
+                        break;
+                }
+            }
         }
         else if (input === "=") {
             console.log(input + " sign clicked");

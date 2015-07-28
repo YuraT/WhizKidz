@@ -1,8 +1,13 @@
+body {
+    font-family: 'Noto Sans', sans-serif;
+}
+
 .standard button {
     font-size: 32px;
     margin: 3px;
     padding: 7px;
     width: 50px;
+    border-radius: 10px;
 }
 .standard {
     display: inline-block;
@@ -16,4 +21,9 @@
     height: 110px;
     width: 60px;
     font-size: 32px;
+}
+
+#answ-Box, #answ-h2 {
+    width: 300px;
+    font-size: 100px;
 }
