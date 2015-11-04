@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="1026dp"
+        android:layout_height="579dp"
+        android:id="@+id/imageView"
+        android:src="@drawable/scn_09_music_signed_in"
+        android:layout_x="-321dp"
+        android:layout_y="-5dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="58dp"
+        android:id="@+id/button9"
+        android:layout_x="2dp"
+        android:layout_y="3dp"
+        android:alpha="0"
+        android:onClick="onClick" />
+
+</AbsoluteLayout>
