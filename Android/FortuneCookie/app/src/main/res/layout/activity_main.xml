@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout               xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#e97f7f"
+    android:id="@+id/llLayout">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ivBackground"
+        android:src="@drawable/ast_fc_fortune_cookie_8"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="403dp"
+        android:layout_height="129dp"
+        android:text="If you have something good in your life, don&apos;t let it go!"
+        android:id="@+id/tvMsg"
+        android:layout_x="93dp"
+        android:layout_y="163dp"
+        android:layout_marginTop="168dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="194dp"
+        android:layout_height="166dp"
+        android:id="@+id/btChange"
+        android:layout_x="204dp"
+        android:layout_y="607dp"
+        android:textColor="#FFFFFF"
+        android:text="Another Cookie"
+        android:background="#00ffffff"
+        android:onClick="onChange"
+        android:layout_marginBottom="152dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
