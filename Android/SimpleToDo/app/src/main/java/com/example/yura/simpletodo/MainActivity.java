@@ -1,8 +1,10 @@
 package com.example.yura.simpletodo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -32,19 +34,42 @@ public class MainActivity extends AppCompatActivity {
         lvTodo = (ListView) findViewById(R.id.lvTodo);
         etItem = (EditText) findViewById(R.id.etItem);
         btAdd = (Button) findViewById(R.id.btAdd);
+        todoList = new ArrayList<>();
 
         readItems();
         todoAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, todoList);
         lvTodo.setAdapter(todoAdapter);
 
-        lvTodo.setOnLongClickListener(new View.OnLongClickListener() {
+        lvTodo.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
-            public boolean onLongClick(View v) {
-
-                return false;
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                todoList.remove(position);
+                todoAdapter.notifyDataSetChanged();
+                writeItems();
+                return true;
             }
         });
 
+        lvTodo.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent i = new Intent(MainActivity.this, EditActivity.class);
+                i.putExtra("itemvalue", todoList.get(position));
+                i.putExtra("itemposition", position);
+                startActivityForResult(i, 200);
+            }
+        });
+    }
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        if(resultCode == 100 && requestCode == 200){
+            String newItemValue = data.getExtras().getString("newitemvalue");
+            int pos = data.getExtras().getInt("pos");
+            todoList.remove(pos);
+            todoList.add(newItemValue);
+            todoAdapter.notifyDataSetChanged();
+            writeItems();
+        }
     }
 
     private void readItems() {
